@@ -183,15 +183,7 @@ body {
 }
 
 .hero-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    pointer-events: none;
+    display: none;
 }
 
 @media (max-width: 968px) {
@@ -388,11 +380,6 @@ body {
     transform: scale(1.05);
 }
 
-.service-card:hover .service-overlay {
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
 
 .service-image {
     position: relative;
@@ -410,16 +397,7 @@ body {
 }
 
 .service-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    transition: background 0.3s ease, backdrop-filter 0.3s ease;
-    pointer-events: none;
+    display: none;
 }
 
 .service-info {
@@ -685,17 +663,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
     pointer-events: none;
 }
 
 .gallery-item:hover .gallery-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
 }
 
 .gallery-caption {
