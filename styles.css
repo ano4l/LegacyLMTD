@@ -935,6 +935,21 @@ body {
     color: var(--black);
 }
 
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.instagram-link svg {
+    transition: transform 0.3s ease;
+}
+
+.instagram-link:hover svg {
+    transform: scale(1.1);
+}
+
 .footer-text {
     font-size: 13px;
     font-weight: 300;
