@@ -51,45 +51,6 @@ if ('IntersectionObserver' in window) {
     });
 }
 
-// Parallax scrolling for depth
-let ticking = false;
-window.addEventListener('scroll', () => {
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-            const scrolled = window.pageYOffset;
-            
-            // Hero parallax
-            const heroImage = document.querySelector('.hero-image');
-            if (heroImage) {
-                heroImage.style.transform = `translateY(${scrolled * 0.3}px) scale(1.1)`;
-            }
-            
-            // Service images parallax
-            const serviceImages = document.querySelectorAll('.service-image');
-            serviceImages.forEach(img => {
-                const rect = img.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    const offset = (window.innerHeight - rect.top) * 0.1;
-                    img.style.transform = `translateY(${offset}px)`;
-                }
-            });
-            
-            // Gallery parallax
-            const galleryImages = document.querySelectorAll('.gallery-image');
-            galleryImages.forEach(img => {
-                const rect = img.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    const offset = (window.innerHeight - rect.top) * 0.08;
-                    img.style.transform = `translateY(${offset}px) scale(1.05)`;
-                }
-            });
-            
-            ticking = false;
-        });
-        ticking = true;
-    }
-});
-
 // Elegant cursor trail effect
 const cursor = document.createElement('div');
 cursor.className = 'custom-cursor';
